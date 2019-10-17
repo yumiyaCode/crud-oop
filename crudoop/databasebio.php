@@ -27,10 +27,10 @@ class Diri extends Database {
         return $data1;
     }
     // Menambah Data
-    public function create($nama, $alamat, $tgl_lahir, $jk, $agama, $umur)
+    public function create($nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur)
     {
         
-        mysqli_query($this->koneksi,"insert into selfbio values('','$nama','$alamat', '$tgl_lahir', '$jk', '$agama', '$umur')");
+        mysqli_query($this->koneksi,"insert into selfbio values('','$nama','$alamat', '$tgl_lahir', '$jenis_kelamin', '$agama', '$umur')");
     }
     // Menampilkan Data Berdasarkan id
     public function show($id)
@@ -45,10 +45,10 @@ class Diri extends Database {
         return $data1;
     }
     // mengupdate data berdasarkan id
-    public function update($nama, $alamat, $tgl_lahir, $jk, $agama, $umur)
+    public function update($id, $nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur)
     {
-        mysqli_query($this->koneksi,"update selfbio set nama='$nama',alamat='$alamat', tanggal lahir='$tgl_lahir',
-        jenis kelamin='$jk', agama ='$agama', umur ='$umur'  where id='$id'");
+        $data1 = mysqli_query($this->koneksi,"UPDATE selfbio SET nama='$nama',alamat='$alamat', tgl_lahir='$tgl_lahir',jenis_kelamin='$jenis_kelamin', agama ='$agama', umur ='$umur'  WHERE id='$id'");
+        return $data1;
     }
     // menghapus data berdasarkan id
     public function delete($id)

@@ -8,7 +8,7 @@ if(isset($_POST['save']))
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
     $tgl_lahir = $_POST['tgl_lahir'];
-    $jk = $_POST['jk'];
+    $jenis_kelamin = $_POST['jenis_kelamin'];
     $agama = $_POST['agama'];
     $tgl= date('Y', strtotime($tgl_lahir));
     $umur= date('Y')-$tgl;
@@ -17,12 +17,12 @@ if(isset($_POST['save']))
 }
 if($aksi == "tambah")
 {
-    $diri->create($nama, $alamat, $tgl_lahir, $jk, $agama, $umur);
+    $diri->create($nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur);
     header("location:index.php");
 }
 elseif($aksi == "update")
 {
-    $diri->update($id, $nama, $alamat, $tgl_lahir, $jk, $agama, $umur);
+    $diri->update($id, $nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur);
     header("location:index.php");
 }
 elseif($aksi == "delete")
