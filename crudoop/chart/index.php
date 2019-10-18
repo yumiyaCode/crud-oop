@@ -71,9 +71,9 @@ $db = new Database();
             <td><?php echo $data['nama_produk']; ?></td>
             <td><?php echo $data['kategori_produk']; ?></td>
             <td><?php echo $data['jumlah_produk']; ?></td>
-            <td><?php echo $data['harga_produk']; ?></td>
+            <td><?php echo "Rp.".number_format ($data['harga_produk'],0,",","."); ?></td>
             <td><?php echo $data['deksripsi']; ?></td>
-            <td><?php echo $data['sub_total']; ?></td>
+            <td><?php echo "Rp.".number_format ($data['sub_total'],0,",","."); ?></td>
             <td><a class="btn btn-outline-primary" role="button" href="show.php?id=<?php echo $data['id']; ?>&aksi=show">Show</a>
              <a class="btn btn-outline-warning" role="button" href="edit.php?id=<?php echo $data['id']; ?>&aksi=edit">Edit</a>
             <a class="btn btn-outline-danger" role="button" href="proses.php?id=<?php echo $data['id']; ?>&aksi=delete" onclick="return confirm('Are you sure to delete?')">Delete</a>
