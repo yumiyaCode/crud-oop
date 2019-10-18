@@ -50,7 +50,7 @@ $db = new Database();
             <th>No</th>
             <th>Nama Produk</th>
             <th>Kategori</th>
-            <th>Jumlah Produk</th>
+            <th>Jumlah</th>
             <th>Harga produk</th>
             <th>Deskripsi</th>
             <th>Sub Total</th>
@@ -63,6 +63,8 @@ $db = new Database();
             $diri = new Diri();
             $no = 1;
             foreach($diri->index() as $data) {
+            $total+= $data['sub_total']
+
         ?>
         <tr>
             <td><?php echo $no++; ?></td>
@@ -92,8 +94,7 @@ $db = new Database();
            <th colspan="10">Total Pembayaran</th>
            <th colspan="10">
            <?php
-           $total=array($data['sub_total']);
-                  echo"Rp.". array_sum($total);
+                echo"Rp.".number_format($total,0,",",".");
            ?></th>
        </tr>
        </thead>

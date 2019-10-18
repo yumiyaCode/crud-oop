@@ -64,7 +64,7 @@
 
          <div class="form-group">
                <label>Deskripsi</label>
-              <input type="text" name="deskripsi" class="form-control" required>
+              <input type="text" name="deskripsi" class="form-control" style="height:100px" required>
          </div>
        <hr>
        <div class="col-md-12">

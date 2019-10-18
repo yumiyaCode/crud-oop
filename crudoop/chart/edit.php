@@ -60,7 +60,7 @@ $diri = new Diri();
               <input type="text" name="nama" class="form-control" value="<?php echo $nama; ?>">
          </div>
 
-        <div class="form-group">
+          <div class="form-group">
               <label>Kategori</label>
                     <select name="kategori" class="form-control">
                     <option value="elektronik">Elektronik</option>
@@ -69,7 +69,7 @@ $diri = new Diri();
                     <option value="perkakas">Perkakas</option>
                </select>
         </div>
-           
+        
          <div class="form-group">
                <label>Jumlah</label>
               <input type="number" name="jumlah" class="form-control" value="<?php echo $jumlah; ?>">
